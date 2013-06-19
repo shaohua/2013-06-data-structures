@@ -22,19 +22,23 @@ describe("stack", function() {
   });
 
   it('should add pushed items to the top of the stack', function() {
-    // Fill out the body of the test here
+    stack.push('Shao rocks!');
+    expect(stack[0]).to.equal('Shao rocks!');
   });
 
   it('should remove popped items from the top of the stack', function() {
-    // Fill out the body of the test here
+    stack.push('yay!');
+    stack.push('boooo');
+    stack.pop();
+    expect(stack.size()).to.equal(1);
   });
 
   it('should push and pop multiple items in the right order (LIFO)', function() {
-    // Fill out the body of the test here
+    expect(stack.size()).to.equal(1000);
   });
 
   it('should not error when popping from an empty stack', function() {
-    // Fill out the body of the test here
+    expect(stack.size()).to.equal(1000);
   });
 
   // Hey! Add more tests here if you can think of ways to test your stack more thoroughly
