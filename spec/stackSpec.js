@@ -34,11 +34,34 @@ describe("stack", function() {
   });
 
   it('should push and pop multiple items in the right order (LIFO)', function() {
-    expect(stack.size()).to.equal(1000);
+    stack.push('pop');
+    stack.push('goes');
+    stack.push('the weasel');
+    expect(stack.pop()).to.equal('the weasel');
+    expect(stack.pop()).to.equal('goes');
+    expect(stack.pop()).to.equal('pop');
   });
 
   it('should not error when popping from an empty stack', function() {
-    expect(stack.size()).to.equal(1000);
+    stack.push('something');
+    stack.push('something else');
+    stack.pop();
+    stack.pop();
+    expect(stack.pop()).to.equal(undefined);
+  });
+
+  it('should handle really complicated problems', function() {
+    stack.push('a');
+    stack.push('b');
+    stack.push('c');
+    stack.pop();
+    stack.push('d');
+    stack.push('e');
+    stack.pop();
+    stack.push('f');
+    expect(stack.pop()).to.equal('f');
+    expect(stack.pop()).to.equal('d');
+    expect(stack.pop()).to.equal('b');
   });
 
   // Hey! Add more tests here if you can think of ways to test your stack more thoroughly
