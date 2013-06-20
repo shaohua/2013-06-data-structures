@@ -1,19 +1,3 @@
-var _ = {};
-_.extend = function(obj) {
-
-  var args = Array.prototype.slice.call(arguments);
-  if(args.length === 1){
-    return obj;
-  }
-
-  for(var i=1;i<args.length;i++){
-    for(var key in args[i]){
-      obj[key] = args[i][key];
-    }
-  }
-  return obj;
-};
-
 var sharedObj1 = {};
 
 sharedObj1.push = function(value){

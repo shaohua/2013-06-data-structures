@@ -14,6 +14,14 @@ describe("stack", function() {
   });
   /* END DO NOT MODIFY */
 
+  // the following test is for profiling only, hence commented out
+  // it('we are going to test a whole bunch of queues!', function() {
+  //   var result = [];
+  //   for(var i = 0; i < 1000000; i++){
+  //     result.push( new Stack() );
+  //   }
+  // });
+
   // Any stack implementation should have the following methods
   it('should have "push", "pop", and "size" methods', function() {
     expect(stack.push).to.be.a('function');

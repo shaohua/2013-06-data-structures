@@ -1,19 +1,3 @@
-var _ = {};
-_.extend = function(obj) {
-  //obj is the same as args[0]
-  var args = Array.prototype.slice.call(arguments);
-  if(args.length === 1){
-    return obj;
-  }
-  //only deal with more than one arguments
-  for(var i=1;i<args.length;i++){
-    for(var key in args[i]){
-      obj[key] = args[i][key];
-    }
-  }
-  return obj;
-};
-
 var makeQueue = function(){
 // Use an object with numeric keys to store values
   var storage = {};

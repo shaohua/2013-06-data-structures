@@ -14,7 +14,15 @@ describe("queue", function() {
   });
   /* END DO NOT MODIFY */
 
+  // the following test is for profiling only, hence commented out
   // Any queue implementation should have the following methods
+  // it('we are going to test a whole bunch of queues!', function() {
+  //   var result = [];
+  //   for(var i = 0; i < 1000000; i++){
+  //     result.push( makeQueue() );
+  //   }
+  // });
+
   it('should have "enqueue", "dequeue", and "size" methods', function() {
     expect(queue.enqueue).to.be.a('function');
     expect(queue.dequeue).to.be.a('function');
@@ -65,7 +73,6 @@ describe("queue", function() {
   });
 
   it('should handle reaaaaally complicated queue activity', function() {
-    // debugger;
     queue.enqueue('a');
     queue.enqueue('b');
     queue.enqueue('c');
@@ -74,7 +81,6 @@ describe("queue", function() {
     queue.enqueue('e');
     queue.dequeue();
     queue.enqueue('f');
-    // debugger;
     expect(queue.dequeue()).to.equal('c');
     expect(queue.dequeue()).to.equal('d');
     expect(queue.dequeue()).to.equal('e');
@@ -82,4 +88,5 @@ describe("queue", function() {
 
 
   // Hey! Add tests here that thoroughly test the functionality of your queue
+
 });
