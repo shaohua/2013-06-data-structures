@@ -1,0 +1,4 @@
+functional queue:1744ms, 16.32%
+functional shared: 2911ms, 30.88%
+prototypal: 664ms,6.56%
+pseudoclassical queue: 230ms, 1.89%
