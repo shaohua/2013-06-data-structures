@@ -1,17 +1,17 @@
 var Stack = function() {
-  var stack = Object.create(sharedObj1);
+  var stack = Object.create(sharedObjForStack);
   stack.howBig = 0;
   return stack;
 };
 
-var sharedObj1 = {};
+var sharedObjForStack = {};
 
-sharedObj1.push = function(value){
+sharedObjForStack.push = function(value){
   this[this.howBig] = value;
   this.howBig += 1;
 };
 
-sharedObj1.pop = function(){
+sharedObjForStack.pop = function(){
   if(this.howBig >= 0) {
     this.howBig -= 1;
     var temp = this[this.howBig];
@@ -22,6 +22,6 @@ sharedObj1.pop = function(){
   }
 };
 
-sharedObj1.size = function(){
+sharedObjForStack.size = function(){
   return this.howBig;
 };
